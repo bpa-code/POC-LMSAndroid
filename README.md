@@ -1,32 +1,27 @@
 Proof of concept
 
-Build of LMS for Termux for Andrpoid 7+ aarch64 
+Build of LMS latest (8.5.1) for Termux for Android 7+ aarch64 & arm
 
-Architecture is known as aarch64-android  (Pi might be aarch64-Linux) 
+To test 
 
-Termux compiler uses clang vs Linux gcc also file system is different so LSM packges & Perl modules had to be built for this enviurment. Also some LMS files had to be changed (Custom.pm, gdresizer.pl etc)
+Expects a clean install of Termux on Android device. If there has been previous use of Termux, from Android Settings, stop Termux App and clear storage. Restart Termux.
 
-LMS Perl modules are built for Termux 23 and not run under Debian.
-Build of aarch64 faad, flax, sox and wvunpack.  
-sox (14.4.2) came from Termux package as building LMS version (14.4.3) of sox has problems.
+On Android, Open browser at url for Command.txt 
+Open the command line in Command.txt and pasted into Termux encuorment (it should be line below)
+curl https://github.com/bpa-code/POC-LMSAndroid/raw/main/InstallLMS.sh -o lms && bash lms
 
-This LMS build uses Termux Perl package which is 5.38.2
+Run the command which will install Termux-LMS files.
+After install, reboot Termux (e.g. type exit & return and then restart App Termux)
 
-This POC is intended for experienced users.
-Phone/Table must have Termux installed (usually from F-Droid).
-At Termux prompt "uname -m" command returns "aarch64"  only this architecture is supported in this POC.
+Both LMS and squeezelite have been configured as Termux services lyrion and squeezleite respectively.
+so use "sv up" and "sv down" to start and stop the services
 
-Assuming a clean new Termux install.
-Run the following.
-1. termux-setup-storage
-2. apt update
-3. apt upgrade (needs about 6 manusl "ues " inputs) 
-4. pkg install perl (needs 1 Yes) 
-5. pkg install wget (needs 1 Yes) 
+e.g. 
+sv up lyrion
+sv up squeezelite.
 
-Download the AndLMS.sh script and run
 
-To run LMS change to usr/squeezeboxerserver and run slimserver.pl script
+
 
 
 
