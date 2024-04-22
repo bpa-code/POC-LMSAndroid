@@ -8,7 +8,9 @@ Expects a clean install of Termux on Android device. If there has been previous 
 
 On Android, Open browser at url for Command.txt 
 Open the command line in Command.txt and pasted into Termux encuorment (it should be line below)
+```
 curl https://github.com/bpa-code/POC-LMSAndroid/raw/main/InstallLMS.sh -o lms && bash lms
+```
 
 Run the command which will install Termux-LMS files.
 After install, reboot Termux (e.g. type exit & return and then restart App Termux)
