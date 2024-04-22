@@ -89,9 +89,7 @@ mkdir $VERBOSE -p InstallLMS
 #  Get Termux special files
 #
 
-# LMS_TGZ="https://github.com/bpa-code/POC-LMSAndroid/raw/main"
-LMS_TGZ="http://192.168.0.65:8000/TermuxInstall"
-
+LMS_TGZ="https://github.com/bpa-code/POC-LMSAndroid/raw/main"
 wget --quiet $LMS_TGZ/termux-site_perl.tgz
 wget --quiet $LMS_TGZ/termux-SlimBin.tgz
 wget --quiet $LMS_TGZ/termux-SlimCPAN.tgz
