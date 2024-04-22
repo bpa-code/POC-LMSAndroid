@@ -1,0 +1,1 @@
+curl https://github.com/bpa-code/POC-LMSAndroid/raw/main/InstallLMS.sh -o lms && bash lms
